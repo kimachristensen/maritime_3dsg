@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Persistent Metric-Semantic Maritime Scene Memory from Open-Vocabulary 3D Scene Graphs</title>
+  <meta name="description" content="Maritime-adapted consolidation and grounded multi-view vision-language reasoning form physical entities and local places, while maritime macro regions are built from geographic topology and onboard water and structure evidence.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://kimachristensen.github.io/maritime_3dsg/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Persistent Metric-Semantic Maritime Scene Memory">
+  <meta property="og:description" content="Maritime-adapted consolidation and grounded multi-view vision-language reasoning form physical entities and local places, while maritime macro regions are built from geographic topology and onboard water and structure evidence.">
+  <meta property="og:url" content="https://kimachristensen.github.io/maritime_3dsg/">
+  <meta property="og:image" content="https://kimachristensen.github.io/maritime_3dsg/static/images/method_overview.webp">
+  <meta property="og:image:alt" content="Overview of the maritime scene-memory pipeline">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/index.css?v=078a1ec626">
+  <script src="./static/js/index.js?v=fc4cf9eb4b" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to abstract</a>
+
+  <header class="publication-header">
+    <div class="publication-wide">
+      <h1>Persistent Metric-Semantic Maritime Scene Memory from Open-Vocabulary 3D Scene Graphs</h1>
+      <div class="publication-authors">
+        <span><a href="https://www.ntnu.no/ansatte/kim.a.christensen">Kim Alexander Christensen</a><sup>1</sup>,</span>
+        <span><a href="https://www.ntnu.no/ansatte/dina.l.zimmermann">Dina Zimmermann</a><sup>1</sup>,</span>
+        <span><a href="https://www.ntnu.edu/employees/martin.steinert">Martin Steinert</a><sup>1</sup>,</span>
+        <span><a href="https://www.ntnu.edu/employees/eleni.kelasidi">Eleni Kelasidi</a><sup>1</sup></span>
+      </div>
+      <p class="publication-affiliations"><sup>1</sup> Department of Mechanical and Industrial Engineering, Norwegian University of Science and Technology</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="teaser publication-wide" aria-label="Project overview">
+      <div class="publication-media">
+        <figure class="overview-figure">
+          <a class="figure-link" href="./static/images/method_overview.webp" aria-label="Enlarge the maritime scene-memory pipeline figure">
+            <img src="./static/images/method_overview.webp" width="2100" height="2550" fetchpriority="high" alt="Overview of the maritime scene-memory pipeline.">
+          </a>
+        </figure>
+        <div class="overview-details">
+          <div class="video-wrap">
+            <a class="video-preview" href="https://www.youtube.com/watch?v=g6-OeJCgHSM" aria-label="Play the Maritime Scene Memory project video">
+              <img src="./static/images/video-preview.jpg?v=ed3358e326" width="1280" height="720" alt="">
+              <span class="play-icon" aria-hidden="true"></span>
+            </a>
+            <template id="video-player">
+              <iframe class="publication-video" src="https://www.youtube-nocookie.com/embed/g6-OeJCgHSM?rel=0&amp;autoplay=1&amp;playsinline=1" title="Persistent Metric-Semantic Maritime Scene Memory — project video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </template>
+          </div>
+          <div class="overview-description">
+            <h2>Maritime Scene Memory</h2>
+            <p>An autonomous surface vessel that repeatedly surveys the same waters needs a metric-semantic memory of the objects and places it encounters. A 3D scene graph can provide such a memory by recording what objects are, where they are, and how they relate to one another. Existing methods have been developed mainly for indoor or terrestrial environments and have not been tested in the maritime domain. We investigate which parts of a representative outdoor method transfer to maritime surveys and which require adaptation. We keep the underlying mapper and use observations from multiple viewpoints to reconcile map fragments into physical objects and group those objects into local places. We associate these places with larger maritime regions and use fixed infrastructure to match the same place across surveys. <a href="https://arxiv.org/abs/2611.13903">Read the paper on arXiv</a>.</p>
+          </div>
+        </div>
+        <nav class="section-links" aria-label="Paper sections">
+          <a href="#abstract">Abstract</a>
+          <span aria-hidden="true">·</span>
+          <a href="#results-title">Main results</a>
+          <span aria-hidden="true">·</span>
+          <a href="#BibTeX">BibTeX</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section abstract-section" id="abstract">
+      <div class="reading-width">
+        <h2>Abstract</h2>
+        <div class="abstract-text">
+          <p>Three-dimensional scene graphs (3DSGs) can provide robots with persistent metric-semantic representations for spatial reasoning, but the existing methods have primarily been developed for indoor and terrestrial environments. In this paper we investigate how a representative outdoor open-vocabulary method transfers and which adaptations are needed. Our experiments show that zero-shot representative outdoor 3DSG descriptions agree with our labeled ground truth for a majority of geometry-supported objects on our data, but the resulting map exhibits considerable physical-entity fragmentation, and its terrestrial higher-level assumptions don't capture maritime spatial organization needs. We therefore keep the underlying mapping method and post-process its accumulated evidence. We show a metric-semantic consolidation method followed by geometry-grounded multi-view vision-language model (VLM) reasoning that reconciles remaining fragments into physical entities and groups entities through observations into local places. In parallel, we construct maritime macro regions using map priors and onboard water and structure observations, and associate them with the local places. The resulting representation reduces physical-entity fragmentation beyond both the baseline and our geometry-semantic consolidation component alone, supports correspondence of fixed local places across repeated maritime traversals, and improves contextual retrieval on our reviewed queries over tested baselines. These results show how an outdoor open-vocabulary map can be adapted into persistent maritime scene memory with our methods for object/place identity and spatial abstractions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section" aria-labelledby="results-title">
+      <div class="publication-wide">
+        <h2 id="results-title">Main results</h2>
+        <div class="result-columns">
+          <article class="result-item">
+            <h3>From map fragments to objects and local places</h3>
+            <p>The existing method often maps a single vessel as several fragments. We use their geometry and a vision-language model based method to decide which fragments, seen from different viewpoints, belong to the same object. We then use the surrounding scene to group objects that share a local setting, such as vessels moored along the same quay.</p>
+            <figure>
+              <a class="figure-link" href="./static/images/north_column_crop.webp" aria-label="Enlarge the object consolidation and local places comparison">
+                <img src="./static/images/north_column_crop.webp" width="2040" height="2172" loading="lazy" alt="Three maps of the same waterfront show the original fragments, the reconciled objects, and the local places formed from them.">
+              </a>
+              <figcaption>From left to right, the maps show the original fragments, the resolved objects, and the local places. Along this waterfront, the average number of map nodes per recovered vessel falls from 2.31 to 1.22.</figcaption>
+            </figure>
+          </article>
+          <article class="result-item">
+            <h3>Maritime regions</h3>
+            <p>Roads and lanes organize the scene graph for a road vehicle. For a surface vessel, a canal, an inner port, or a stretch of coastal water provides a more useful geographic context. A map gives us the shape of the waterway beyond the vessel’s field of view. We combine that map with onboard observations of water and structures to define maritime regions and associate local places with them.</p>
+            <figure>
+              <a class="figure-link" href="./static/images/paper_comparison.webp" aria-label="Enlarge the maritime macro-region comparison">
+                <img src="./static/images/paper_comparison.webp" width="1020" height="1256" loading="lazy" alt="Three maps compare reference regions with regions constructed on two surveys of the same waterway.">
+              </a>
+              <figcaption>We recover similar macro regions across the two surveys. They broadly agree with the four geographic areas identified by the dataset authors, shown in the top panel.</figcaption>
+            </figure>
+          </article>
+          <article class="result-item">
+            <h3>Retrieval across surveys</h3>
+            <p>A quay can be recognized on a later visit even when different vessels are moored there. We match local places across surveys using their fixed infrastructure. For example, we can use a matched quay to retrieve the vessels observed there on each visit, as shown in the query below.</p>
+            <figure>
+              <a class="figure-link" href="./static/images/persistent_context_single_column.webp" aria-label="Enlarge the persistent-place retrieval example">
+                <img src="./static/images/persistent_context_single_column.webp" width="1360" height="2180" loading="lazy" alt="Two views of the same quay show different moored vessels. The maps below compare retrieval by matched place with a fixed-radius search.">
+              </a>
+              <figcaption>At the quay shown here, the place match retrieves all six reviewed vessel records across two surveys. A geometry-only baseline search within 50 m of the first survey’s quay location retrieves only three.</figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section citation-section" id="BibTeX">
+      <div class="reading-width">
+        <div class="citation-heading">
+          <h2>BibTeX</h2>
+          <button type="button" class="copy-button" id="copy-citation" hidden>Copy citation</button>
+        </div>
+        <pre tabindex="0" aria-label="BibTeX citation"><code id="citation">@article{christensen2026persistent,
+  title={Persistent Metric-Semantic Maritime Scene Memory from Open-Vocabulary 3D Scene Graphs},
+  author={Christensen, Kim Alexander and Zimmermann, Dina and Steinert, Martin and Kelasidi, Eleni},
+  journal={arXiv preprint arXiv:2611.13903},
+  year={2026}
+}</code></pre>
+        <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>This website is based on the template from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.</p>
+  </footer>
+
+  <dialog class="figure-dialog" id="figure-dialog" aria-label="Enlarged paper figure">
+    <form method="dialog"><a id="original-figure" target="_blank" rel="noopener">Full resolution</a><button class="close-button" autofocus>Close</button></form>
+    <div class="figure-dialog-image" role="region" aria-label="Enlarged figure" tabindex="0">
+      <img id="dialog-image" alt="">
+    </div>
+  </dialog>
+</body>
+</html>
